@@ -22,7 +22,10 @@ export default function HomeScreen() {
     if (!image) return;
     setLoading(true);
     const predictions = await detectHolds(image);
-    setHolds(predictions);
+    console.log(predictions)
+    if (Array.isArray(predictions)){
+      setHolds(predictions);
+    }
     setLoading(false);
   };
 

@@ -1,6 +1,7 @@
 export interface Detection {
-    bbox: [number, number, number, number]; // x, y, width, height
-    score: number;
-    class: string;
-  }
-  
+  bbox: [number, number, number, number];
+  score: number;
+  class: number;
+  imageWidth: number;
+  imageHeight: number;
+}
